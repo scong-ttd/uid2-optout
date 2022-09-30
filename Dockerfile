@@ -22,4 +22,5 @@ CMD java \
     -Djava.security.egd=file:/dev/./urandom \
     -Dvertx.logger-delegate-factory-class-name=io.vertx.core.logging.SLF4JLogDelegateFactory \
     -Dlogback.configurationFile=${LOGBACK_CONF} \
+    -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 \
     -jar ${JAR_NAME}-${JAR_VERSION}.jar
